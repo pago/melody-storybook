@@ -1,0 +1,55 @@
+{
+    "name": "@storybook/melody",
+    "version": "0.0.1-alpha.1",
+    "description": "Storybook for Melody: Develop Melody Components in isolation with Hot Reloading.",
+    "keywords": [
+        "storybook"
+    ],
+    "homepage": "https://github.com/trivago/melody/tree/master/packages/melody-storybook",
+    "bugs": {
+        "url": "https://github.com/trivago/melody/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/trivago/melody.git",
+        "directory": "packages/melody-storybook"
+    },
+    "license": "MIT",
+    "files": [
+        "bin/**/*",
+        "dist/**/*",
+        "README.md",
+        "*.js",
+        "*.d.ts"
+    ],
+    "main": "dist/client/index.js",
+    "bin": {
+        "build-storybook": "./bin/build.js",
+        "start-storybook": "./bin/index.js",
+        "storybook-server": "./bin/index.js"
+    },
+    "scripts": {
+        "build": "rm -r ./build; mkdir build; NODE_ENV=release-without-modules babel ./src --out-dir ./dist --config-file ../../.babelrc --copy-files"
+    },
+    "dependencies": {
+        "@storybook/addons": "6.0.0-alpha.1",
+        "@storybook/client-logger": "6.0.0-alpha.1",
+        "@storybook/core": "6.0.0-alpha.1",
+        "core-js": "^3.0.1",
+        "global": "^4.4.0",
+        "regenerator-runtime": "^0.13.3",
+        "ts-dedent": "^1.1.0"
+    },
+    "peerDependencies": {
+        "babel-loader": "^7.0.0 || ^8.0.0",
+        "melody-loader": "link:../melody-loader",
+        "melody-extension-core": "link:../melody-extension-core",
+        "melody-runtime": "link:../melody-runtime"
+    },
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
