@@ -29,7 +29,7 @@
         "storybook-server": "./bin/index.js"
     },
     "scripts": {
-        "build": "rm -r ./build; mkdir build; NODE_ENV=release-without-modules babel ./src --out-dir ./dist --config-file ../../.babelrc --copy-files"
+        "build": "rm -r ./build; mkdir build; babel ./src --out-dir ./dist --copy-files"
     },
     "dependencies": {
         "@storybook/addons": "6.0.0-alpha.1",
@@ -38,18 +38,33 @@
         "core-js": "^3.0.1",
         "global": "^4.4.0",
         "regenerator-runtime": "^0.13.3",
-        "ts-dedent": "^1.1.0"
+        "ts-dedent": "^1.1.0",
+        "melody-loader": "^1.0.0"
     },
     "peerDependencies": {
         "babel-loader": "^7.0.0 || ^8.0.0",
-        "melody-loader": "link:../melody-loader",
-        "melody-extension-core": "link:../melody-extension-core",
-        "melody-runtime": "link:../melody-runtime"
+        "melody-extension-core": "^1.0.0",
+        "melody-runtime": "^1.0.0"
     },
     "engines": {
         "node": ">=8.0.0"
     },
     "publishConfig": {
         "access": "public"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.3",
+        "@babel/core": "^7.8.3",
+        "@babel/preset-env": "^7.8.3"
+    },
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "modules": "commonjs"
+                }
+            ]
+        ]
     }
 }

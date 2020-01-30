@@ -1,6 +1,6 @@
-# Storybook for Marko
+# Storybook for Melody/Twig
 
-Storybook for Marko is a UI development environment for your Marko components.
+Storybook for Melody/Twig is a UI development environment for your Melody/Twig components.
 With it, you can visualize different states of your UI components and develop them interactively.
 
 ![Storybook Screenshot](https://github.com/storybookjs/storybook/blob/master/media/storybook-intro.gif)
@@ -11,7 +11,7 @@ So you can develop UI components in isolation without worrying about app specifi
 ## Getting Started
 
 ```sh
-cd my-marko-app
+cd my-melody-app
 npx -p @storybook/cli sb init
 ```
 
@@ -26,6 +26,6 @@ Here are some featured storybooks that you can reference to see how Storybook wo
 
 ## Docs
 
-- [Basics](https://storybook.js.org/basics/introduction)
-- [Configurations](https://storybook.js.org/configurations/default-config)
-- [Addons](https://storybook.js.org/addons/introduction)
+-   [Basics](https://storybook.js.org/basics/introduction)
+-   [Configurations](https://storybook.js.org/configurations/default-config)
+-   [Addons](https://storybook.js.org/addons/introduction)

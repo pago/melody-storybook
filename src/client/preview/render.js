@@ -7,13 +7,10 @@ import {
     elementClose,
     unmountComponent,
 } from 'melody-idom';
-import { logger } from '@storybook/client-logger';
 
 const root = document.getElementById('root');
-let rootEl = null; // = document.createElement('div');
-// root.appendChild(rootEl);
+let rootEl = null;
 let activeTemplate = null; // template for the currently loaded component.
-// let component = null;
 
 function render(el, template, props) {
     const result = patchOuter(el, () => {
@@ -80,13 +77,11 @@ export default function renderMain({
             unmountComponentAtNode(rootEl);
         }
 
-        // if (activeTemplate) {
         let node;
         while ((node = root.firstElementChild)) {
             unmountComponentAtNode(node);
             root.removeChild(node);
         }
-        // }
 
         root.innerHTML = '';
         rootEl = document.createElement('div');
