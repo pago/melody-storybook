@@ -30,7 +30,8 @@
         "storybook-server": "./bin/index.js"
     },
     "scripts": {
-        "prepublishOnly": "rm -r ./build; mkdir build; babel ./src --out-dir ./dist --copy-files"
+        "prepublishOnly": "rm -r ./build; mkdir build; babel ./src --out-dir ./dist --copy-files",
+        "test": "echo \"No test specified\""
     },
     "dependencies": {
         "@storybook/addons": "6.0.0-alpha.1",
