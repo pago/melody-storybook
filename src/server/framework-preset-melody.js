@@ -1,4 +1,6 @@
-export function webpack(config) {
+export async function webpack(config, { presets }) {
+    const melodyPlugins = (await presets.apply('melodyPlugins')) || [];
+
     return {
         ...config,
         module: {
@@ -12,7 +14,7 @@ export function webpack(config) {
                         {
                             loader: require.resolve('melody-loader'),
                             options: {
-                                plugins: ['idom'],
+                                plugins: ['idom', ...melodyPlugins],
                             },
                         },
                     ],

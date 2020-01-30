@@ -73,10 +73,6 @@ export default function renderMain({
         // When rendering the same template with new input, we reuse the same instance.
         render(rootEl, template, config.props);
     } else {
-        if (rootEl) {
-            unmountComponentAtNode(rootEl);
-        }
-
         let node;
         while ((node = root.firstElementChild)) {
             unmountComponentAtNode(node);

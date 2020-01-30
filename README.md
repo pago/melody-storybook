@@ -10,9 +10,58 @@ So you can develop UI components in isolation without worrying about app specifi
 
 ## Getting Started
 
+### Step 1: Add dependencies
+
 ```sh
 cd my-melody-app
-npx -p @storybook/cli sb init
+npm install @storybook/melody --save-dev
+```
+
+### Step 2: Add a npm script
+
+In your `package.json`, add the following npm script to start storybook:
+
+```
+{
+  "scripts": {
+    "storybook": "start-storybook"
+  }
+}
+```
+
+### Step 3: Create the main file
+
+Create the `.storybook/main.js` file to tell Storybook where to find your stories:
+
+```
+module.exports {
+    stories: ['../src/**/*.stories.[tj]s'],
+};
+```
+
+You can also add your custom Melody plugins through the `melodyPlugins` key like this:
+
+```
+module.exports {
+    melodyPlugins: ['load-functions'],
+    stories: ['../src/**/*.stories.[tj]s'],
+};
+```
+
+### Step 4: Write your stories
+
+```
+import Button from '../components/button.twig';
+
+export default { title: 'Button', component: Button }
+
+export const withText = () => ({
+  props: { text 'some text' }
+});
+
+export const withEmoji = () => ({
+  props: { text '😀 😎 👍 💯' }
+});
 ```
 
 For more information visit: [storybook.js.org](https://storybook.js.org)

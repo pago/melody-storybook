@@ -1,18 +1,19 @@
 {
     "name": "@storybook/melody",
-    "version": "0.0.1-alpha.1",
-    "description": "Storybook for Melody: Develop Melody Components in isolation with Hot Reloading.",
+    "version": "0.0.0",
+    "description": "Storybook for Melody/Twig: Develop Melody Components in isolation with Hot Reloading.",
     "keywords": [
-        "storybook"
+        "storybook",
+        "melody",
+        "twig"
     ],
-    "homepage": "https://github.com/trivago/melody/tree/master/packages/melody-storybook",
+    "homepage": "https://github.com/pago/melody-storybook/",
     "bugs": {
-        "url": "https://github.com/trivago/melody/issues"
+        "url": "https://github.com/pago/melody-storybook/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/trivago/melody.git",
-        "directory": "packages/melody-storybook"
+        "url": "https://github.com/pago/melody-storybook.git"
     },
     "license": "MIT",
     "files": [
@@ -29,7 +30,7 @@
         "storybook-server": "./bin/index.js"
     },
     "scripts": {
-        "build": "rm -r ./build; mkdir build; babel ./src --out-dir ./dist --copy-files"
+        "prepublishOnly": "rm -r ./build; mkdir build; babel ./src --out-dir ./dist --copy-files"
     },
     "dependencies": {
         "@storybook/addons": "6.0.0-alpha.1",
