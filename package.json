@@ -1,6 +1,6 @@
 {
     "name": "@storybook/melody",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Storybook for Melody/Twig: Develop Melody Components in isolation with Hot Reloading.",
     "keywords": [
         "storybook",
@@ -39,9 +39,9 @@
         "@storybook/core": "6.0.0-alpha.1",
         "core-js": "^3.0.1",
         "global": "^4.4.0",
+        "melody-loader": "^1.0.0",
         "regenerator-runtime": "^0.13.3",
-        "ts-dedent": "^1.1.0",
-        "melody-loader": "^1.0.0"
+        "ts-dedent": "^1.1.0"
     },
     "peerDependencies": {
         "babel-loader": "^7.0.0 || ^8.0.0",
