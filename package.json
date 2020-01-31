@@ -1,6 +1,6 @@
 {
     "name": "@storybook/melody",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Storybook for Melody/Twig: Develop Melody Components in isolation with Hot Reloading.",
     "keywords": [
         "storybook",
